@@ -46,7 +46,7 @@ function App() {
   const [isEventsPaneExpanded, setIsEventsPaneExpanded] =
     useState<boolean>(true);
   const [userText, setUserText] = useState<string>("");
-  const [isPTTActive, setIsPTTActive] = useState<boolean>(false);
+  const [isPTTActive, setIsPTTActive] = useState<boolean>(true);
   const [isPTTUserSpeaking, setIsPTTUserSpeaking] = useState<boolean>(false);
   const [isAudioPlaybackEnabled, setIsAudioPlaybackEnabled] =
     useState<boolean>(true);
@@ -250,7 +250,7 @@ function App() {
       session: {
         modalities: ["text", "audio"],
         instructions,
-        voice: "coral",
+        voice: "echo",
         input_audio_format: "pcm16",
         output_audio_format: "pcm16",
         input_audio_transcription: { model: "whisper-1" },
@@ -404,23 +404,23 @@ function App() {
   const agentSetKey = searchParams.get("agentConfig") || "default";
 
   return (
-    <div className="text-base flex flex-col h-screen bg-gray-100 text-gray-800 relative">
+    <div className="text-base flex flex-col h-screen bg-accent text-gray-800 relative">
       <div className="p-5 text-lg font-semibold flex justify-between items-center">
         <div className="flex items-center">
           <div onClick={() => window.location.reload()} style={{ cursor: 'pointer' }}>
             <Image
-              src="/openai-logomark.svg"
-              alt="OpenAI Logo"
+              src="/kevin-g.jpeg"
+              alt="KEVIN G"
               width={20}
               height={20}
               className="mr-2"
             />
           </div>
           <div>
-            Realtime API <span className="text-gray-500">Agents</span>
+            KEVIN G
           </div>
         </div>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <label className="flex items-center text-base gap-1 mr-2 font-medium">
             Scenario
           </label>
@@ -480,7 +480,7 @@ function App() {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
 
       <div className="flex flex-1 gap-2 px-2 overflow-hidden relative">

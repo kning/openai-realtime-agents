@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #fafafa;
-  --foreground: #171717;
+  --color-primary: #FA865B;
+  --color-secondary: #AC1CA5;
+  --color-accent: #F18DB2;
+  --color-background: #EDE8CB;
+  --color-foreground: #D1C893;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-primary: #FA865B;
+    --color-secondary: #AC1CA5;
+    --color-accent: #E53D74;
+    --color-background: #EDE8CB;
+    --color-foreground: #D1C893;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-foreground);
+  background: var(--color-background);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
